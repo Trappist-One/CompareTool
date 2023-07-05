@@ -2,14 +2,13 @@ package org.xukz.compare.annotation;
 
 import org.xukz.compare.function.CompareFunction;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * @author xukz
  * @since 1.0
  */
+@Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Target(ElementType.FIELD)
 public @interface CompareField {

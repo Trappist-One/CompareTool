@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f151c68-9ed7-4ba2-bdc5-192f8e8942df" name="Changes" comment="" />
+    <list default="true" id="8f151c68-9ed7-4ba2-bdc5-192f8e8942df" name="Changes" comment="need complete">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/xukz/compare/annotation/CompareField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/xukz/compare/annotation/CompareField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/xukz/compare/core/CompareTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/xukz/compare/core/CompareTool.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,8 +53,9 @@
     "last_opened_file_path": "D:/dev/workspaces_test/CompareTool",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RebelAgentSelection">
@@ -62,11 +69,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688452403625</updated>
-      <workItem from="1688452409090" duration="3546000" />
+      <workItem from="1688452409090" duration="19701000" />
     </task>
+    <task id="LOCAL-00001" summary="need complete">
+      <created>1688539584335</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688539584335</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="need complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="need complete" />
   </component>
 </project>
