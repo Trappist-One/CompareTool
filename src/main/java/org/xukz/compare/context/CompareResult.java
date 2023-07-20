@@ -1,5 +1,8 @@
 package org.xukz.compare.context;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -8,6 +11,10 @@ import java.util.Map;
  * @since 1.0
  */
 public class CompareResult {
+
+    @Setter
+    @Getter
+    private String identity;
 
     private Map<String, Object> newMap = new LinkedHashMap<>();
 
@@ -30,5 +37,4 @@ public class CompareResult {
         DEL,
         MOD
     }
-
 }

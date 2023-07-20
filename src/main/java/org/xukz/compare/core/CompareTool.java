@@ -8,9 +8,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.xukz.compare.annotation.CompareBody;
 import org.xukz.compare.annotation.CompareField;
 import org.xukz.compare.annotation.Identity;
+import org.xukz.compare.context.CompareResult;
 
 import java.lang.reflect.Field;
 import java.util.*;
+import java.util.stream.Stream;
 
 /**
  * @author xukz
@@ -26,6 +28,7 @@ public class CompareTool<T> {
     private String identity;
 
     private Field identityField;
+
 
     public CompareTool(Class<T> clazz) {
         Assert.checkNonNull(clazz, "Input parameter class is empty!");
@@ -57,22 +60,23 @@ public class CompareTool<T> {
         Map<String, T> sourceMap = JSONObject.parseObject(JSON.toJSONString(source), Map.class);
         Map<String, T> targetMap = JSONObject.parseObject(JSON.toJSONString(target), Map.class);
 
-
     }
 
     public List<Map<String, T>> compare(List<T> sourceList, List<T> targetList) {
         Map<Object, T> sourceListMap = parseIdentity(sourceList);
         Map<Object, T> targetListMap = parseIdentity(targetList);
 
-        Set<Object> exsitIdentitys = new HashSet<>();
-        sourceListMap.forEach((identity, sourceObj) -> {
-            T targetObj = targetListMap.get(identity);
-            if (targetObj == null) {
+        Set<Object> sourceKeySet = sourceListMap.keySet();
+        Set<Object> targetKeySet = targetListMap.keySet();
 
-            } else {
-                compare(sourceObj, targetObj);
-                exsitIdentitys.add(identity);
-            }
+        Stream<Object> newKeys = sourceKeySet.stream().filter(key -> !targetKeySet.contains(key));
+
+        Stream<Object> compareKeys = sourceKeySet.stream().filter(key -> !targetKeySet.contains(key));
+
+        Stream<Object> delKeys = targetKeySet.stream().filter(key -> !sourceKeySet.contains(key));
+
+        compareKeys.forEach(key -> {
+            compare(sourceListMap.get(key), targetListMap.get(key));
         });
     }
 
